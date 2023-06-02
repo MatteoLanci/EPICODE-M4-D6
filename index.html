@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Users DB | Matteo Lanci</title>
+  </head>
+
+  <body id="main">
+    <table class="table caption-top">
+      <caption>
+        Users:
+      </caption>
+      <caption>
+        <span class="dropdown">
+          <button
+            class="btn btn-outline-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            id="tableDropBtn"
+            style="width: 150px"
+          >
+            Choose One
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="updateDropBtn('Email')"
+              >
+                Email
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="updateDropBtn('Username')"
+              >
+                Username
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" onclick="updateDropBtn('Name')">
+                Name
+              </a>
+            </li>
+          </ul>
+        </span>
+        <input
+          type="text"
+          id="tableInput"
+          placeholder="Search..."
+          class="form-control-sm"
+        />
+        <button
+          type="button"
+          onclick="filterResults()"
+          class="btn btn-outline-primary"
+        >
+          <i class="bi bi-search"></i>
+        </button>
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Username</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Website</th>
+        </tr>
+      </thead>
+
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
